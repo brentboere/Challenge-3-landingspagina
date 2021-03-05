@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Space X dashboard</title>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2u11BvM5pUECq41xZhFYkUWpvEa3Z7E&callback=initMap"></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+       <header>
+           <nav>
+                <img class="logo" src="logo.png" alt="logo" />
+                <p>Elon Musk</p>
+                <img class="profilepicmenu" src="user.png" alt="profilepic" />
+            </nav>
+       </header>
+       <main>
+          <h1>Plekken om te landen</h1>
+           <section class="container">
+               <section class="plaatsnaam">
+                   <div id="plaatsnaam"></div>
+                   <div id="onderregel"></div>
+                   <div id="plaats"></div>
+                   <div id="herlaadpagina">
+                       <a href="" id="btn-reload" onclick="window.location.reload();">Herlaad pagina</a>
+                   </div>
+               </section>
+               <section class="maps">
+                   <div id="maps"></div>
+                   <section class="contbtn">
+                       <a id="btn-zoek" class="btn-zoek" onclick="getClicks();initMap();clearData();getAPIdata();onAPISucces()">Verander locatie</a>
+                   </section>
+               </section>
+               <section class="preview">
+                    <div id="preview"></div>
+               </section>
+               <section class="weeradvies">
+                   <h1>Weeradvies:</h1>
+                   <div id="weeradvies"></div>
+                   <div id="weeradvies2"></div>
+                   <div id="conclusie"></div>
+               </section>     
+               <section class="weerbericht">
+                   <div id="weerbericht"></div>
+               </section>
+           </section>
+       </main>
+    </body>
+</html>
